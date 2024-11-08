@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romance Éternelle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Section de démarrage avec le bouton pour lancer la musique -->
+    <div id="start-screen">
+        <button id="start-music" onclick="startMusic()">🎶 Lancer la musique</button>
+    </div>
+
+    <!-- Musique de fond -->
+    <audio id="background-music" loop>
+        <source src="IJEwctEOiPV_07-Mon-bijou.mp3" type="audio/mp3">
+        Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+
+    <!-- Contenu principal (caché par défaut) -->
+    <div id="main-content" style="display: none;">
+        <!-- Section de bienvenue avec un message romantique -->
+        <section class="intro">
+            <div class="content">
+                <h1>Romance Éternelle</h1>
+                <p>En vendredi j'ai decider de t'écrire tout les jours une lettres jusqu'au partiels </p>
+                <button onclick="window.location.href='#histoire'">Notre histoire</button>
+            </div>
+        </section>
+
+        <!-- Section d'histoire -->
+        <section id="histoire" class="story">
+            <h2>Notre Histoire</h2>
+            <p>il étais une fois, une jeune fille passioné par la medecine intelligente chiante et embisieuse.Psssons les details sur la recontre avec l'amour de sa vie pour une prochaine lettre.Cette femme est né pour etre medecin elle est talenteuse mais cette femme pense que sont retard la pénalise alors que Le succès, c'est la somme de petits efforts répétés jour après jour il ne faut pas que tu pense que c'est une faiblesse mais une armes. Par ailleurs elle  aime aussi les sushis ainsi nous avons décider que si tu bosse bien tu aura une recompense je te commanderai des sushii autant que tu veut. Le petite ketty cette lettre t'est destiné aujourd hui pour te motiver. Je t'aime ma femme oublie pas je suis la pour toi pas contre toi.</p>
+        <p>Je t'aime</p>
+        </section>
+
+
+
+        <!-- Effet de particules avec des cœurs flottants -->
+        <div id="hearts"></div>
+
+        <!-- Icône de contrôle pour le son -->
+        <div id="music-icon" onclick="toggleMusic()" title="Activer/Désactiver le son">🔊</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cursive', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #f6d5f7, #f4c4f3);
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Section de démarrage */
+#start-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 20px;
+}
+
+#start-music {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background-color: #ff6f91;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#start-music:hover {
+    background-color: #ff3b6f;
+}
+
+/* Contenu principal */
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.intro p {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.intro button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #ff6f91;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.intro button:hover {
+    background-color: #ff3b6f;
+}
+
+/* Section d'histoire */
+.story {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+    font-size: 1em;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Effets de particules (cœurs flottants) */
+#hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 105, 180, 0.9);
+    clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 50% 80%, 0% 100%, 0% 35%);
+    animation: float 6s linear infinite;
+    opacity: 0.9;
+}
+
+/* Animation pour faire flotter les cœurs */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* Style pour l'icône de contrôle de la musique */
+#music-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ff6f91;
+    animation: fadeIn 3s ease-in-out;
+}
+
+#music-icon:hover {
+    color: #ff3b6f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #start-music {
+        font-size: 1.2em;
+        padding: 12px 25px;
+    }
+
+    .intro h1 {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .intro button {
+        font-size: 1em;
+    }
+
+    .story {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+
+    #music-icon {
+        font-size: 25px;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #start-music {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .intro h1 {
+        font-size: 1.8em;
+    }
+
+    .intro p {
+        font-size: 0.9em;
+    }
+
+    .intro button {
+        font-size: 0.9em;
+    }
+
+    .story {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    #music-icon {
+        font-size: 20px;
+    }
+}
